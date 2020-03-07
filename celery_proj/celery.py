@@ -9,6 +9,14 @@ app = Celery('celery_proj')
 app.config_from_object('django.conf:settings', namespace='CELERY')
 app.autodiscover_tasks()
 
+# app.conf.beat_schedule = {
+#     'hello_hasan': {
+#         'task': 'jam zadan',
+#         'schedule': 10.0,
+#         'args': (15, 16)
+#     },
+# }
+
 
 @app.task(bind=True)
 def debug_task(self):
