@@ -8,7 +8,7 @@ def mashin_hesab(request):
     if request.method == 'POST':
         body = request.POST
         num = int(body['number'])
-        for i in range(100):
+        for i in range(5):
             result = power.delay(100000)
     # print(result.status)
     # time.sleep(10)

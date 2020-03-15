@@ -24,5 +24,6 @@ def hasan():
 #     return 'hello'
 
 
-# celery -A celery_proj worker - l info - -> worker
+# celery -A celery_proj worker -l info - -> worker  by default cpu core number generate conccurrent worker
+# celery -A celery_proj worker --concurrency 10 -l info
 # celery -A celery_proj beat - l info - -- -> beat
