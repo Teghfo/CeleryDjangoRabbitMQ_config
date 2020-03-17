@@ -9,10 +9,6 @@ def mashin_hesab(request):
         body = request.POST
         num = int(body['number'])
         for i in range(10):
-            switch(body['sahm']):
-                case 'khesapa':
-                    khesapa.delay(500)
-
             result = power.delay(10000000000)
             get_result.delay(result.id)
     # print(result.status)
